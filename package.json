@@ -1,0 +1,26 @@
+{
+  "name": "hermione-one",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hermione.conf.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "hermione": "^2.7.1",
+    "hermione-image-minifier": "^0.1.0",
+    "html-reporter": "^4.6.4",
+    "webdriverio": "^5.10.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha",
+    "selenium:start": "selenium-standalone start",
+    "start": "npx npm-run-all --parallel selenium:start hermione:gui",
+    "hermione": "node_modules/.bin/hermione",
+    "hermione:gui": "hermione gui"
+  },
+  "author": "",
+  "license": "ISC"
+}
