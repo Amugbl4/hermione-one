@@ -13,7 +13,7 @@ module.exports = {
         chrome_fhd: {
             compositeImage: true,
             windowSize: '1920x1080',
-            screenshotsDir: 'screen/chrome/1920',
+            screenshotsDir: 'screen/chrome',
             desiredCapabilities: {
                 browserName: 'chrome',
                 chromeOptions: {
@@ -25,7 +25,7 @@ module.exports = {
          chrome_1440: {
              compositeImage: true,
              windowSize: '1440x900',
-             screenshotsDir: 'screen/chrome/1440',
+             screenshotsDir: 'screen/chrome',
              desiredCapabilities: {
                  browserName: 'chrome',
                  chromeOptions: {
@@ -97,7 +97,15 @@ module.exports = {
     },
 
     plugins: {
-        'html-reporter/hermione': { enabled: true, path: 'hermione-reports', defaultView: 'all' },
+        'html-reporter/hermione': {
+            enabled: true,
+            path: 'hermione-reports',
+            defaultView: 'all' },
+
+        'hermione-image-minifier': {
+            enabled: true,
+            compressionLevel: 7 // maximal compression, but takes the most time
+        }
     },
 
 

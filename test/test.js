@@ -1,7 +1,7 @@
 const assert = require('chai').assert;
 
 describe('test', function () {
-    
+    hermione.skip.in('mobile', 'not for mobile');
     it('test', function () {
         return this.browser
             .url('/')
